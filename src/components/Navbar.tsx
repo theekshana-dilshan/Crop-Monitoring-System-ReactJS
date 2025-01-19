@@ -1,4 +1,4 @@
-import {constants} from "../assets/constants.ts";
+import {constants} from "@/assets/constants";
 import {useState} from "react";
 
 const Navbar = () => {

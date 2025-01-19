@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png'
-import profilePicture from '../assets/profilePic.png'
+import profilePicture from '../assets/AJZ_8675 new.jpg'
 import {Leaf, Sprout, Tractor, Users} from "lucide-react";
 
 export const constants = {
