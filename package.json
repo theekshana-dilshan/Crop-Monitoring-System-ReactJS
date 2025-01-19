@@ -26,7 +26,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "font-awesome": "^4.7.0",
-    "lucide-react": "^0.471.0",
+    "lucide-react": "^0.471.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.2.0",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@types/node": "^22.10.5",
+    "@types/node": "^22.10.7",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@types/react-router-dom": "^5.3.3",
