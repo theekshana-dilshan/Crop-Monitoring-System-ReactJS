@@ -1,107 +1,101 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faClipboardList,
-    faHouse,
-    faLeaf,
-    faSeedling,
-    faTools,
-    faTractor,
-    faUsers
-} from "@fortawesome/free-solid-svg-icons";
-import {Link} from "react-router-dom";
+    Card,
+    Typography,
+    List,
+    ListItem,
+    ListItemPrefix,
+    ListItemSuffix,
+    Chip,
+} from "@material-tailwind/react";
+import { Link } from "react-router-dom";
+import {
+    HomeIcon,
+    UsersIcon,
+    TruckIcon,
+    WrenchScrewdriverIcon,
+    ClipboardDocumentListIcon,
+    Cog6ToothIcon,
+    PowerIcon,
+    CubeIcon,
+    Squares2X2Icon,
+} from "@heroicons/react/24/solid";
 import React from "react";
 
 const SideNavbar = () => {
     return (
-        <div>
-            <div className="hidden md:flex bg-white flex-auto w-12">
-                <div className="w-32 h-auto bg-white flex flex-col items-center py-4 space-y-6 border-r-2 border-gray-300">
-                    {/* Dashboard Button */}
-                    <div className="group relative" id="dashboardBtn">
-                        <Link to="/" className="text-gray-500 hover:text-gray-900">
-                            <div className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200">
-                                <FontAwesomeIcon icon={faHouse} />
-                            </div>
-                        </Link>
-                        <span className="tooltip hidden group-hover:block absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 shadow-lg">
-                            Dashboard
-                        </span>
-                    </div>
-
-                    {/* Field Button */}
-                    <div className="group relative" id="fieldBtn">
-                        <Link to="/field" className="text-gray-500 hover:text-gray-900">
-                            <div className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200">
-                                <FontAwesomeIcon icon={faSeedling} />
-                            </div>
-                        </Link>
-                        <span className="tooltip hidden group-hover:block absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 shadow-lg">
-                            Field
-                        </span>
-                    </div>
-
-                    {/* Crop Button */}
-                    <div className="group relative" id="cropBtn">
-                        <Link to="/crop" className="text-gray-500 hover:text-gray-900">
-                            <div className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200">
-                                <FontAwesomeIcon icon={faLeaf} />
-                            </div>
-                        </Link>
-                        <span className="tooltip hidden group-hover:block absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 shadow-lg">
-                            Crop
-                        </span>
-                    </div>
-
-                    {/* Staff Button */}
-                    <div className="group relative" id="staffBtn">
-                        <Link to="/staff" className="text-gray-500 hover:text-gray-900">
-                            <div className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200">
-                                <FontAwesomeIcon icon={faUsers} />
-                            </div>
-                        </Link>
-                        <span className="tooltip hidden group-hover:block absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 shadow-lg">
-                            Staff
-                        </span>
-                    </div>
-
-                    {/* Vehicle Button */}
-                    <div className="group relative" id="vehicleBtn">
-                        <Link to="/vehicle" className="text-gray-500 hover:text-gray-900">
-                            <div className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200">
-                                <FontAwesomeIcon icon={faTractor} />
-                            </div>
-                        </Link>
-                        <span className="tooltip hidden group-hover:block absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 shadow-lg">
-                            Vehicle
-                        </span>
-                    </div>
-
-                    {/* Equipment Button */}
-                    <div className="group relative mt-auto" id="equipmentBtn">
-                        <Link to="/equipment" className="text-gray-500 hover:text-gray-900">
-                            <div className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200">
-                                <FontAwesomeIcon icon={faTools} />
-                            </div>
-                        </Link>
-                        <span className="tooltip hidden group-hover:block absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 shadow-lg">
-                            Equipment
-                        </span>
-                    </div>
-
-                    {/* Log Button */}
-                    <div className="group relative mt-auto" id="logBtn">
-                        <Link to="/log" className="text-gray-500 hover:text-gray-900">
-                            <div className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-200">
-                                <FontAwesomeIcon icon={faClipboardList} />
-                            </div>
-                        </Link>
-                        <span className="tooltip hidden group-hover:block absolute left-16 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 shadow-lg">
-                            Log
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Card className="h-[calc(100vh-4rem)] w-full max-w-[13rem] p-4 shadow-xl shadow-green-300">
+            <List>
+                <Link to="/">
+                    <ListItem className="hover:text-green-800">
+                        <ListItemPrefix>
+                            <HomeIcon className="h-6 w-6 mr-2 mb-2 mt-2"/>
+                        </ListItemPrefix>
+                        Dashboard
+                    </ListItem>
+                </Link>
+                <Link to="/field">
+                    <ListItem className="hover:text-green-800">
+                        <ListItemPrefix>
+                            <Squares2X2Icon className="h-6 w-6 mr-2 mb-2 mt-2"/>
+                        </ListItemPrefix>
+                        Field
+                    </ListItem>
+                </Link>
+                <Link to="/crop">
+                    <ListItem className="hover:text-green-800">
+                        <ListItemPrefix>
+                            <CubeIcon className="h-6 w-6 mr-2 mb-2 mt-2"/>
+                        </ListItemPrefix>
+                        Crop
+                    </ListItem>
+                </Link>
+                <Link to="/staff">
+                    <ListItem className="hover:text-green-800">
+                        <ListItemPrefix>
+                            <UsersIcon className="h-6 w-6 mr-2 mb-2 mt-2"/>
+                        </ListItemPrefix>
+                        Staff
+                    </ListItem>
+                </Link>
+                <Link to="/vehicle">
+                    <ListItem className="hover:text-green-800">
+                        <ListItemPrefix>
+                            <TruckIcon className="h-6 w-6 mr-2 mb-2 mt-2"/>
+                        </ListItemPrefix>
+                        Vehicle
+                    </ListItem>
+                </Link>
+                <Link to="/equipment">
+                    <ListItem className="hover:text-green-800">
+                        <ListItemPrefix>
+                            <WrenchScrewdriverIcon className="h-6 w-6 mr-2 mb-2 mt-2"/>
+                        </ListItemPrefix>
+                        Equipment
+                    </ListItem>
+                </Link>
+                <Link to="/log">
+                    <ListItem className="hover:text-green-800">
+                        <ListItemPrefix>
+                            <ClipboardDocumentListIcon className="h-6 w-6 mr-2 mb-2 mt-2"/>
+                        </ListItemPrefix>
+                        Log
+                    </ListItem>
+                </Link>
+                <hr className="my-2 border-blue-gray-50"/>
+                <ListItem className="hover:text-green-800">
+                    <ListItemPrefix>
+                        <Cog6ToothIcon className="h-6 w-6 mr-2 mb-2 mt-2"/>
+                    </ListItemPrefix>
+                    Settings
+                </ListItem>
+                <ListItem className="hover:text-green-800">
+                    <ListItemPrefix>
+                        <PowerIcon className="h-6 w-6 mr-2 mb-2 mt-2"/>
+                    </ListItemPrefix>
+                    Log Out
+                </ListItem>
+            </List>
+        </Card>
     );
 };
 

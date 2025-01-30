@@ -46,7 +46,7 @@ const Field = () => {
                             </div>
                             <Button
                                 onClick={() => setIsAddModalOpen(true)}
-                                className=" text-white px-6 py-3 rounded-lg flex items-center space-x-2 shadow-lg "
+                                className=" text-white px-6 py-3 rounded-lg flex items-center space-x-2 shadow-lg bg-green-800"
                             >
                                 + Add Field
                             </Button>
@@ -57,7 +57,7 @@ const Field = () => {
                     <div className="bg-white shadow-xl rounded-lg overflow-hidden">
                         <table className="w-full text-center">
                             <thead>
-                            <tr className="bg-gradient-to-r from-gray-300 to-gray-300 text-gray-950">
+                            <tr className="bg-gradient-to-r from-gray-300 to-green-200 text-gray-950">
                                 <th className="p-4 font-semibold text-gray-600">Code</th>
                                 <th className="p-4 font-semibold text-gray-600">Name</th>
                                 <th className="p-4 font-semibold text-gray-600">Location</th>
@@ -67,7 +67,7 @@ const Field = () => {
                                 <th className="p-4 font-semibold text-gray-600">Action</th>
                             </tr>
                             </thead>
-                            <tbody className="bg-gray-50 text-gray-600">
+                            <tbody className="bg-green-50 text-gray-600">
                             {fields.map((field) => (
                                 <tr key={field.fieldCode} className="border-b">
                                     <td className="p-4 flex items-center justify-center space-x-5">

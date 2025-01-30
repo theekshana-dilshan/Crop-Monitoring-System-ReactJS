@@ -30,7 +30,7 @@ const Dashboard = () => {
                         })}
                     </p>
                 </div>
-                <Button>
+                <Button className="bg-green-800">
                     View Reports
                 </Button>
             </div>

@@ -45,7 +45,7 @@ const Crop = () => {
                             </div>
                             <Button
                                 onClick={() => setIsAddModalOpen(true)}
-                                className="text-white px-6 py-3 rounded-lg flex items-center space-x-2 shadow-lg">
+                                className="text-white px-6 py-3 rounded-lg flex items-center space-x-2 shadow-lg bg-green-800">
                                 + Add Crop
                             </Button>
                         </div>
@@ -54,7 +54,7 @@ const Crop = () => {
                     <div className="bg-white shadow-xl rounded-lg overflow-hidden">
                         <table className="w-full text-center">
                             <thead>
-                            <tr className="bg-gradient-to-r from-gray-300 to-gray-300 text-gray-700">
+                            <tr className="bg-gradient-to-r from-gray-300 to-green-200 text-gray-700">
                                 <th className="p-4 font-semibold text-gray-600">Code</th>
                                 <th className="p-4 font-semibold text-gray-600">
                                     Common Name

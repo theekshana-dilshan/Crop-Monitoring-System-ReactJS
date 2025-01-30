@@ -1,4 +1,5 @@
 import {constants} from "@/assets/constants";
+import React from "react";
 import {useState} from "react";
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
                     <div className="flex h-16 items-center justify-between">
                         <div className="flex items-center">
                             <div className="flex-shrink-0">
-                                <img className="h-14 w-14" src={constants.logo} alt="Green Shadow (Pvt) Ltd."/>
+                                <img className="h-14 w-18" src={constants.logo} alt="Green Shadow (Pvt) Ltd."/>
                             </div>
                             <div
                                 className="flex ml-5 rounded-md shadow-sm items-center ring-1 ring-inset ring-gray-300 sm:max-w-md">
