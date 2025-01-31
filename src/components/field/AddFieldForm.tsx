@@ -43,16 +43,17 @@ const AddFieldForm = ({isOpen, onClose}) => {
                 </DialogHeader>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                    <FieldInputModel setFieldCode={setFieldCode} setFieldName={setFieldName}
-                                     setFieldLocation={setFieldLocation} setFieldSize={setFieldSize}
-                                     setImg_1={setImg_1} setImg_2={setImg_2}
-                    />
+                    <div className="max-h-[60vh] overflow-y-auto">
+                        <FieldInputModel setFieldCode={setFieldCode} setFieldName={setFieldName}
+                                         setFieldLocation={setFieldLocation} setFieldSize={setFieldSize}
+                                         setImg_1={setImg_1} setImg_2={setImg_2}/>
+                    </div>
 
                     <div className="flex justify-end space-x-4">
                         <Button
                             type="button"
                             variant="outline"
-                            onClick={()=>{
+                            onClick={() => {
                                 onClose();
                             }}
                             className="border-zinc-200 text-zinc-700 hover:bg-zinc-100"
@@ -61,7 +62,7 @@ const AddFieldForm = ({isOpen, onClose}) => {
                         </Button>
                         <Button
                             type="submit"
-                            className="bg-zinc-900 text-white hover:bg-zinc-800"
+                            className="bg-zinc-900 text-white hover:bg-green-700"
                         >
                             Add Field
                         </Button>

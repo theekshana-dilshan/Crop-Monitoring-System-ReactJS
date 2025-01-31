@@ -59,27 +59,32 @@ const EditCropForm = ({ isOpen, onClose, cropsData }) => {
                 </DialogHeader>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                    <CropInputModel setCropCode={setCropCode} setCropName={setCropName} setCropScientificName={setCropScientificName}
-                                    setCropCategory={setCropCategory} setCropField={setCropField} setCropSeason={setCropSeason} setCropImage={setCropImage}
-                                    cropCode={cropCode} cropName={cropName} cropScientificName={cropScientificName} cropCategory={cropCategory}
-                                    cropField={cropField} cropSeason={cropSeason} cropImage={cropImage}
-                    />
-                    <div className="flex justify-end space-x-4">
-                        <Button
-                            type="button"
-                            variant="outline"
-                            onClick={onClose}
-                            className="border-zinc-200 text-zinc-700 hover:bg-zinc-100"
-                        >
-                            Cancel
-                        </Button>
-                        <Button
-                            type="submit"
-                            className="bg-zinc-900 text-white hover:bg-zinc-800"
-                        >
-                            Save Crop
-                        </Button>
+                    <div className="max-h-[60vh] overflow-y-auto">
+                        <CropInputModel setCropCode={setCropCode} setCropName={setCropName}
+                                        setCropScientificName={setCropScientificName}
+                                        setCropCategory={setCropCategory} setCropField={setCropField}
+                                        setCropSeason={setCropSeason} setCropImage={setCropImage}
+                                        cropCode={cropCode} cropName={cropName} cropScientificName={cropScientificName}
+                                        cropCategory={cropCategory}
+                                        cropField={cropField} cropSeason={cropSeason} cropImage={cropImage}
+                        />
                     </div>
+                        <div className="flex justify-end space-x-4">
+                            <Button
+                                type="button"
+                                variant="outline"
+                                onClick={onClose}
+                                className="border-zinc-200 text-zinc-700 hover:bg-zinc-100"
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                type="submit"
+                                className="bg-zinc-900 text-white hover:bg-zinc-800"
+                            >
+                                Save Crop
+                            </Button>
+                        </div>
                 </form>
             </DialogContent>
         </Dialog>

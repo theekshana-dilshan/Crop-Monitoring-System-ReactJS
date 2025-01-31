@@ -45,8 +45,12 @@ const AddCropForm = ({ isOpen, onClose }) => {
                 </DialogHeader>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                    <CropInputModel setCropCode={setCropCode} setCropName={setCropName} setCropScientificName={setCropScientificName}
-                                    setCropCategory={setCropCategory} setCropField={setCropField} setCropSeason={setCropSeason} setCropImage={setCropImage}/>
+                    <div className="max-h-[60vh] overflow-y-auto">
+                        <CropInputModel setCropCode={setCropCode} setCropName={setCropName}
+                                        setCropScientificName={setCropScientificName}
+                                        setCropCategory={setCropCategory} setCropField={setCropField}
+                                        setCropSeason={setCropSeason} setCropImage={setCropImage}/>
+                    </div>
                     <div className="flex justify-end space-x-4">
                         <Button
                             type="button"
@@ -58,7 +62,7 @@ const AddCropForm = ({ isOpen, onClose }) => {
                         </Button>
                         <Button
                             type="submit"
-                            className="bg-zinc-900 text-white hover:bg-zinc-800"
+                            className="bg-zinc-900 text-white hover:bg-green-700"
                         >
                             Add Crop
                         </Button>

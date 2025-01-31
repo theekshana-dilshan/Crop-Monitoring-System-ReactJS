@@ -61,52 +61,54 @@ const AddStaffForm = ({ isOpen, onClose }) => {
 
                 <div className="max-h-[80vh] overflow-y-auto">
                     <form onSubmit={handleSubmit}>
-                        <StaffInputModel
-                            staffId={staffId}
-                            setStaffId={setStaffId}
-                            firstName={firstName}
-                            setFirstName={setFirstName}
-                            lastName={lastName}
-                            setLastName={setLastName}
-                            designation={designation}
-                            setDesignation={setDesignation}
-                            gender={gender}
-                            setGender={setGender}
-                            joinedDate={joinedDate}
-                            setJoinedDate={setJoinedDate}
-                            dob={dob}
-                            fields={fields}
-                            setDob={setDob}
-                            address={address}
-                            setAddress={setAddress}
-                            contactNo={contactNo}
-                            setContactNo={setContactNo}
-                            email={email}
-                            setEmail={setEmail}
-                            role={role}
-                            setRole={setRole}
-                            field={field}
-                            setField={setField}
-                            vehicle={vehicle}
-                            setVehicle={setVehicle}
-                        />
-
-                        <div className="flex mt-2 mr-2 justify-end space-x-4 col-span-2">
-                            <Button
-                                type="button"
-                                variant="outline"
-                                onClick={onClose}
-                                className="border-zinc-200 text-zinc-700 hover:bg-zinc-100"
-                            >
-                                Cancel
-                            </Button>
-                            <Button
-                                type="submit"
-                                className="bg-zinc-900 text-white hover:bg-zinc-800"
-                            >
-                                Add Staff
-                            </Button>
+                        <div className="max-h-[60vh] overflow-y-auto">
+                            <StaffInputModel
+                                staffId={staffId}
+                                setStaffId={setStaffId}
+                                firstName={firstName}
+                                setFirstName={setFirstName}
+                                lastName={lastName}
+                                setLastName={setLastName}
+                                designation={designation}
+                                setDesignation={setDesignation}
+                                gender={gender}
+                                setGender={setGender}
+                                joinedDate={joinedDate}
+                                setJoinedDate={setJoinedDate}
+                                dob={dob}
+                                fields={fields}
+                                setDob={setDob}
+                                address={address}
+                                setAddress={setAddress}
+                                contactNo={contactNo}
+                                setContactNo={setContactNo}
+                                email={email}
+                                setEmail={setEmail}
+                                role={role}
+                                setRole={setRole}
+                                field={field}
+                                setField={setField}
+                                vehicle={vehicle}
+                                setVehicle={setVehicle}
+                            />
                         </div>
+
+                            <div className="flex mt-2 mr-2 justify-end space-x-4 col-span-2">
+                                <Button
+                                    type="button"
+                                    variant="outline"
+                                    onClick={onClose}
+                                    className="border-zinc-200 text-zinc-700 hover:bg-zinc-100"
+                                >
+                                    Cancel
+                                </Button>
+                                <Button
+                                    type="submit"
+                                    className="bg-zinc-900 text-white hover:bg-green-700"
+                                >
+                                    Add Staff
+                                </Button>
+                            </div>
                     </form>
                 </div>
             </DialogContent>

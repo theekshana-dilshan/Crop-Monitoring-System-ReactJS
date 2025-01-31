@@ -52,37 +52,39 @@ const EditFieldForm = ({ isOpen, onClose, fieldData }) => {
                 </DialogHeader>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                    <FieldInputModel
-                        setFieldCode={setFieldCode}
-                        setFieldName={setFieldName}
-                        setFieldLocation={setFieldLocation}
-                        setFieldSize={setFieldSize}
-                        setImg_1={setImg_1}
-                        setImg_2={setImg_2}
-                        fieldCode={fieldCode}
-                        fieldName={fieldName}
-                        fieldLocation={fieldLocation}
-                        fieldSize={fieldSize}
-                        img_1={img_1}
-                        img_2={img_2}
-                    />
-
-                    <div className="flex justify-end space-x-4">
-                        <Button
-                            type="button"
-                            variant="outline"
-                            onClick={onClose}
-                            className="border-zinc-200 text-zinc-700 hover:bg-zinc-100"
-                        >
-                            Cancel
-                        </Button>
-                        <Button
-                            type="submit"
-                            className="bg-zinc-900 text-white hover:bg-z inc-800"
-                        >
-                            Save Field
-                        </Button>
+                    <div className="max-h-[60vh] overflow-y-auto">
+                        <FieldInputModel
+                            setFieldCode={setFieldCode}
+                            setFieldName={setFieldName}
+                            setFieldLocation={setFieldLocation}
+                            setFieldSize={setFieldSize}
+                            setImg_1={setImg_1}
+                            setImg_2={setImg_2}
+                            fieldCode={fieldCode}
+                            fieldName={fieldName}
+                            fieldLocation={fieldLocation}
+                            fieldSize={fieldSize}
+                            img_1={img_1}
+                            img_2={img_2}
+                        />
                     </div>
+
+                        <div className="flex justify-end space-x-4">
+                            <Button
+                                type="button"
+                                variant="outline"
+                                onClick={onClose}
+                                className="border-zinc-200 text-zinc-700 hover:bg-zinc-100"
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                type="submit"
+                                className="bg-zinc-900 text-white hover:bg-z inc-800"
+                            >
+                                Save Field
+                            </Button>
+                        </div>
                 </form>
             </DialogContent>
         </Dialog>

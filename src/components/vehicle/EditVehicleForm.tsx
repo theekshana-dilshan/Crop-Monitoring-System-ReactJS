@@ -57,38 +57,40 @@ const EditVehicleForm = ({ isOpen, onClose, vehicle }) => {
                 </DialogHeader>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                    <VehicleInputModel
-                        vehicleId={vehicleId}
-                        licensePlateNumber={licensePlateNumber}
-                        vehicleCategory={vehicleCategory}
-                        setVehicleId={setVehicleId}
-                        fuelType={fuelType}
-                        status={status}
-                        allocatedStaff={allocatedStaff}
-                        remarks={remarks}
-                        setLicensePlateNumber={setLicensePlateNumber}
-                        setVehicleCategory={setVehicleCategory}
-                        setFuelType={setFuelType}
-                        setStatus={setStatus}
-                        setAllocatedStaff={setAllocatedStaff}
-                        setRemarks={setRemarks}
-                    />
-                    <div className="flex justify-end space-x-4">
-                        <Button
-                            type="button"
-                            variant="outline"
-                            onClick={onClose}
-                            className="border-zinc-200 text-zinc-700 hover:bg-zinc-100"
-                        >
-                            Cancel
-                        </Button>
-                        <Button
-                            type="submit"
-                            className="bg-zinc-900 text-white hover:bg-zinc-800"
-                        >
-                            Save Changes
-                        </Button>
+                    <div className="max-h-[60vh] overflow-y-auto">
+                        <VehicleInputModel
+                            vehicleId={vehicleId}
+                            licensePlateNumber={licensePlateNumber}
+                            vehicleCategory={vehicleCategory}
+                            setVehicleId={setVehicleId}
+                            fuelType={fuelType}
+                            status={status}
+                            allocatedStaff={allocatedStaff}
+                            remarks={remarks}
+                            setLicensePlateNumber={setLicensePlateNumber}
+                            setVehicleCategory={setVehicleCategory}
+                            setFuelType={setFuelType}
+                            setStatus={setStatus}
+                            setAllocatedStaff={setAllocatedStaff}
+                            setRemarks={setRemarks}
+                        />
                     </div>
+                        <div className="flex justify-end space-x-4">
+                            <Button
+                                type="button"
+                                variant="outline"
+                                onClick={onClose}
+                                className="border-zinc-200 text-zinc-700 hover:bg-zinc-100"
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                type="submit"
+                                className="bg-zinc-900 text-white hover:bg-zinc-800"
+                            >
+                                Save Changes
+                            </Button>
+                        </div>
                 </form>
             </DialogContent>
         </Dialog>
